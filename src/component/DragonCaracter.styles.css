@@ -1,10 +1,12 @@
 .dragon {
   
-
+    display:flex; 
+   /* justify-content:center;  */
+    justify-items: center;  
+   
 }
 
-.dragon-Imge {
-    display: table
-
-    
+.delet {
+    cursor: pointer; 
+    color: red; 
 }
