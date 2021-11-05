@@ -2,13 +2,16 @@ import React from "react";
 import Card from "react-bootstrap/Card"; 
 import './DragonCaracter.styles.css'
 
-export default function DragonBallCaracther({ dragonData,deletHandler }) {
+export default function DragonBallCaracther({ dragonData,deletHandler,InputState}) {
   return ( 
 
     <div>
         
 
-      {dragonData.map(({ Name, Imag }, idx) => ( 
+      { dragonData.filter(({Name}) => Name.includes(InputState))  
+      
+      
+      .map(({ Name, Imag }, idx) => ( 
      
   
 
