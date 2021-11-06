@@ -1,5 +1,5 @@
 import React, { useState,useRef } from "react";
-import DragonBallCaracther from "./DragonBallCaracther";
+import DragonBallMap from "./DragonBallMap";
 import DragonBallData from "./DragonBallData"; 
 
 
@@ -9,7 +9,7 @@ export default function DragonBall() {
 
   const [show,SetShow] = useState(!false)  
 
-  const foucesInput = useRef(null) 
+  // const foucesInput = useRef(null) 
 
   const [Input,setInput] = useState('')
 
@@ -33,7 +33,7 @@ export default function DragonBall() {
 
     SetDragonData(DeletImag)   
 
-    console.log(dragonData);  
+    // console.log(dragonData);  
     console.log(DeletImag);  
 
     ///////////////// Another way  
@@ -45,18 +45,18 @@ export default function DragonBall() {
     // })  
    }  
 
-   const foucsHandler = () => {
+  //  const foucsHandler = () => {
 
-        console.log(foucesInput.current.focus());
+  //       console.log(foucesInput.current.focus());
         
-   } 
+  //  } 
 
-   const toggleHandler = () => {
+//    const toggleHandler = () => {
 
-    console.log(foucesInput.current.value); 
+//     console.log(foucesInput.current.value); 
     
     
-} 
+// } 
 
 
 const changeInput = (e) => {
@@ -79,11 +79,11 @@ const changeInput = (e) => {
        <br /> 
      <input type="text" placeholder='charcters Namesss' value={Input}  onChange={changeInput} />  
      <br /> <br /> 
-     <input type="text" placeholder='charcter Name'  ref ={foucesInput} onChange={toggleHandler} />  
+     {/* <input type="text" placeholder='charcter Name'  ref ={foucesInput} onChange={toggleHandler} />   */}
 
-     <button onClick={foucsHandler}> click to fouces on form  </button>  
+     {/* <button onClick={foucsHandler}> click to fouces on form  </button>   */}
       { show &&  
-     <DragonBallCaracther dragonData={dragonData} deletHandler={deletHandler}  InputState={Input}  /> 
+     <DragonBallMap dragonData={dragonData} deletHandler={deletHandler}  InputState={Input}  /> 
       } 
      
     </div>
