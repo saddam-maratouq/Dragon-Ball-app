@@ -2,19 +2,19 @@ import React from "react";
 import DragonBallCard from "./DragonBallCard";
 import './DragonCaracter.styles.css'
 
-export default function DragonBallMap({ dragonData,InputState,deletHandler}) {
+export default function DragonBallMap({ datas,InputNameState,deletHandler}) {
   return ( 
 
     <div  > 
         
 
-      { dragonData.filter(({Name}) =>  Name.includes(InputState))  
+      {datas.filter(({Name},id) =>  Name.includes(InputNameState))  
       
       
-      .map(({ Name , ...otherprops }, idx) => (  
+      .map(({ Name , ...otherprops }, id) => (  
 
        
-                <DragonBallCard key={idx}  idx={idx} className='dragon' deletHandler={deletHandler}  Name={Name} {...otherprops}/> 
+                <DragonBallCard key={id}  id={id} className='dragon' deletHandler={deletHandler}  Name={Name} {...otherprops}/> 
        
      
             
